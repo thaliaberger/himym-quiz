@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 const Widget = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 20px 0;
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: 2px;
@@ -10,7 +9,6 @@ const Widget = styled.div`
   overflow: hidden;
 
   h1 {
-    @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
     font-family: "Playfair Display", serif;
     color: ${({ theme }) => theme.colors.wood};
     font-size: 1.15em;
@@ -107,10 +105,16 @@ Widget.Content = styled.div`
 
   button:active {
     -webkit-box-shadow: 0px 2px 0px #f93920;
+    background-color: #fc4e37;
     -moz-box-shadow: 0px 2px 0px #f93920;
     box-shadow: 0px 2px 0px #f93920;
     position: relative;
     top: 4px;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background-color: #fc4e37;
   }
 
   button:disabled {
@@ -119,6 +123,8 @@ Widget.Content = styled.div`
     -moz-box-shadow: 0px 1px 0px #db8074;
     box-shadow: 0px 1px 0px #db8074;
     border: solid 1px #db8074;
+    background: ${({ theme }) => theme.colors.torange};
+    cursor: default;
   }
 
   p {

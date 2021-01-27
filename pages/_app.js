@@ -43,6 +43,11 @@ export default function App({ Component, pageProps }) {
           href="https://i.pinimg.com/originals/87/91/e0/8791e067c5486e07267c022720d4d21c.png"
           type="image/x-icon"
         />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <GlobalStyle />
       <ThemeProvider theme={theme}>

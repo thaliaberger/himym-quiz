@@ -7,8 +7,8 @@ import { useRouter } from "next/router";
 export const QuizContainer = styled.div`
   width: 100%;
   max-width: 350px;
-  padding: 20px 0 150px 0;
-  margin: auto 10%;
+  padding: 20px 0 90px 0;
+  margin: auto 13%;
 
   img {
     height: 100px;

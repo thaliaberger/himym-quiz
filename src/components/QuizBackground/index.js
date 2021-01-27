@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 const QuizBackground = styled.div`
-  width: 100%;
+  background: url("https://i.ibb.co/dDDyzZw/bg.png") no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-position: 0 0;
-  background-image: url("https://i.ibb.co/RvvY7M9/Design-sem-nome-1.png");
-  background-color: ${({ theme }) => theme.colors.dark};
-  flex: 1;
+  background-color: ${({ theme }) => theme.colors.bird};
   @media screen and (max-width: 500px) {
     background-image: none;
     &:after {
@@ -17,7 +17,7 @@ const QuizBackground = styled.div`
           transparent,
           ${({ theme }) => theme.colors.bird}
         ),
-        url("https://i.ibb.co/RvvY7M9/Design-sem-nome-1.png");
+        url("https://i.ibb.co/HndSm4n/bg.png");
       display: block;
       width: 100%;
       height: 210px;
