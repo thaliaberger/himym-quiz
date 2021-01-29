@@ -1,0 +1,25 @@
+{
+  "title": "Quiz HIMYM",
+  "description": "Teste os seus conhecimentos sobre How I Met Your Mother",
+  "questions": [
+    {
+      "image": "https://badabingbadabambadaboom.files.wordpress.com/2011/06/tumblr_lkizudvqbj1qj4l4do1_400.gif",
+      "title": "Qual fruta apareceu misteriosamente no apartamento de Marshall e Ted?",
+      "answer": 2,
+      "alternatives": ["Jaca", "Melancia", "Abacaxi", "Melão"]
+    },
+    {
+      "image": "https://media.giphy.com/media/10Ffks3ezqOVig/giphy.gif",
+      "title": "Qual o nome do terapeuta que acabou virando namorado da Robin?",
+      "answer": 0,
+      "alternatives": ["Kevin", "Simon", "Dom", "Gael"]
+    },
+    {
+      "image": "https://media.giphy.com/media/qEpDaeeyIiNMI/giphy.gif",
+      "title": "Quando Barney perde uma aposta para Marshall, qual animal estampa a gravata que ele é obrigado a usar?",
+      "answer": 3,
+      "alternatives": ["Foca", "Urso", "Pássaro", "Pato"]
+    }
+  ],
+  "external": [""]
+}

@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
 
 const theme = {
   colors: {
-    primary: "#DDD5CB",
+    primary: "#efe9e1",
     dark: "#1D1C1D",
     bic: "#273E94",
     sky: "#30A7B8",

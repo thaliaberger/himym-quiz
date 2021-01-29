@@ -1,20 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Widget from "../src/components/Widget";
-import QuizBackground from "../src/components/QuizBackground";
 import { useRouter } from "next/router";
 
-export const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  padding: 20px 0 90px 0;
-  margin: auto 13%;
-
-  img {
-    height: 100px;
-    margin-left: 110px;
-  }
-`;
+import Widget from "../src/components/Widget";
+import Input from "../src/components/Input";
+import QuizBackground from "../src/components/QuizBackground";
+import QuizContainer from "../src/components/QuizContainer";
 
 export default function Home() {
   const router = useRouter();
@@ -35,20 +26,22 @@ export default function Home() {
                 router.push(`/quiz?name=${name}`);
               }}
             >
-              <input
+              <Input
+                name="nomeDoUsuario"
                 onChange={function (event) {
                   setName(event.target.value);
                 }}
                 placeholder="Qual o seu nome?"
+                value={name}
               />
+              <p class="legen">It's gonna be legen...</p>
+              {/* <p>
+                <small>wait for it </small>
+              </p> */}
               <button type="submit" disabled={name.length === 0}>
                 Jogar
               </button>
             </form>
-            <p class="legen">It's gonna be legen...</p>
-            <p>
-              <small>wait for it </small>
-            </p>
           </Widget.Content>
         </Widget>
         <Widget>

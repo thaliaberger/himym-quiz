@@ -32,6 +32,14 @@ Widget.Header = styled.header`
   * {
     margin: 0;
   }
+
+  .header-title {
+    font-family: "Playfair Display", serif;
+    color: ${({ theme }) => theme.colors.wood};
+    font-size: 1.15em;
+    letter-spacing: 1px;
+    margin: 0 auto;
+  }
 `;
 
 Widget.Content = styled.div`
@@ -58,29 +66,6 @@ Widget.Content = styled.div`
     padding: 0;
   }
 
-  input {
-    border: none;
-    background-color: ${({ theme }) => theme.colors.primary};
-    border-bottom: 1px solid ${({ theme }) => theme.colors.dark};
-    width: 275px;
-    height: 30px;
-  }
-
-  input::placeholder {
-    color: ${({ theme }) => theme.colors.dark};
-  }
-
-  [placeholder]:focus::-webkit-input-placeholder {
-    transition: text-indent 0.2s 0.2s ease;
-    text-indent: -100%;
-    opacity: 1;
-  }
-
-  input:focus,
-  button:focus {
-    outline: none;
-  }
-
   button {
     position: relative;
     width: auto;
@@ -92,7 +77,7 @@ Widget.Content = styled.div`
     background: ${({ theme }) => theme.colors.torange};
     text-align: center;
     padding: 6px 15px;
-    margin: 20px;
+    margin: 20px 0 0 0;
 
     -webkit-transition: all 0.1s;
     -moz-transition: all 0.1s;
@@ -127,13 +112,49 @@ Widget.Content = styled.div`
     cursor: default;
   }
 
-  p {
-    margin: 0;
+  button:focus {
+    outline: none;
   }
+
   .legen {
+    margin: 30px 0 0 0;
     font-weight: bold;
     font-size: 1.1em;
     font-family: "Playfair Display", serif;
+  }
+
+  [placeholder]:focus::-webkit-input-placeholder {
+    transition: text-indent 0.2s 0.2s ease;
+    text-indent: -100%;
+    opacity: 1;
+  }
+
+  .questions-title {
+    font-size: 1em;
+    font-family: "Playfair Display", serif;
+    color: ${({ theme }) => theme.colors.bic};
+  }
+`;
+
+Widget.Topic = styled.a`
+  outline: 0;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.bic};
+  background-color: ${({ theme }) => theme.colors.wood};
+  width: 200px;
+  padding: 5px 15px;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.2s;
+  display: block;
+  box-shadow: 2px 2px 3px 0.2px rgba(0, 0, 0, 0.2);
+
+  &:hover,
+  &:focus {
+    background-color: ${({ theme }) => theme.colors.torange};
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;
 
