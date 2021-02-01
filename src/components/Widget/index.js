@@ -61,9 +61,22 @@ Widget.Content = styled.div`
     justify-content: center;
     align-items: center;
   }
-  ul {
+  .result-ul {
     list-style: none;
     padding: 0;
+    color: ${({ theme }) => theme.colors.dark};
+  }
+
+  .result-ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    height: 20px;
+  }
+
+  .result-ul strong {
+    color: ${({ theme }) => theme.colors.bic};
+    width: 30px;
   }
 
   button {
@@ -131,6 +144,7 @@ Widget.Content = styled.div`
 
   .questions-title {
     font-size: 1em;
+    min-height: 70px;
     font-family: "Playfair Display", serif;
     color: ${({ theme }) => theme.colors.bic};
   }
@@ -143,7 +157,6 @@ Widget.Topic = styled.a`
   background-color: ${({ theme }) => theme.colors.wood};
   width: 200px;
   padding: 5px 15px;
-  margin-top: 5px;
   margin-bottom: 8px;
   cursor: pointer;
   border-radius: 4px;
@@ -155,6 +168,26 @@ Widget.Topic = styled.a`
   &:focus {
     background-color: ${({ theme }) => theme.colors.torange};
     color: ${({ theme }) => theme.colors.primary};
+  }
+`;
+
+Widget.Loading = styled.div`
+  min-height: 1000px;
+  h1 {
+    font-family: "Playfair Display", serif;
+    color: ${({ theme }) => theme.colors.wood};
+    background-color: ${({ theme }) => theme.colors.bic};
+    width: 120px;
+    text-align: center;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    margin: 50px auto;
+  }
+
+  img {
+    width: 300px;
+    height: 300px;
+    padding-left: 20px;
   }
 `;
 

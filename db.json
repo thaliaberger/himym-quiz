@@ -19,6 +19,23 @@
       "title": "Quando Barney perde uma aposta para Marshall, qual animal estampa a gravata que ele é obrigado a usar?",
       "answer": 3,
       "alternatives": ["Foca", "Urso", "Pássaro", "Pato"]
+    },
+    {
+      "image": "https://i.pinimg.com/originals/c0/46/43/c04643161fcc94079626521782997bad.gif",
+      "title": "Lily termina o noivado com Marshall para estudar artes em qual cidade?",
+      "answer": 3,
+      "alternatives": [
+        "Santa Monica",
+        "Los Angeles",
+        "San Diego",
+        "San Francisco"
+      ]
+    },
+    {
+      "image": "https://media.tenor.com/images/4b6481cebd426ed484e48a8846d6e013/tenor.gif",
+      "title": "Qual é o time do coração de Marshall?",
+      "answer": 2,
+      "alternatives": ["Packers", "Minnesota", "Vikings", "Vancouver"]
     }
   ],
   "external": [""]
