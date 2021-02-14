@@ -64,14 +64,17 @@ Widget.Content = styled.div`
   .result-ul {
     list-style: none;
     padding: 0;
-    color: ${({ theme }) => theme.colors.dark};
+    margin: 0;
   }
 
   .result-ul li {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: center;
     height: 20px;
+    padding: 5px;
+    margin: 5px 0;
+    background-color: ${({ theme }) => theme.colors.wood};
   }
 
   .result-ul strong {
@@ -145,6 +148,16 @@ Widget.Content = styled.div`
   .questions-title {
     font-size: 1em;
     min-height: 70px;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    color: ${({ theme }) => theme.colors.bic};
+  }
+
+  .result-title {
+    font-size: 1em;
+    min-height: 30px;
+    margin: 0;
+    padding: 0;
     font-family: "Playfair Display", serif;
     color: ${({ theme }) => theme.colors.bic};
   }
@@ -164,15 +177,13 @@ Widget.Topic = styled.a`
   display: block;
   box-shadow: 2px 2px 3px 0.2px rgba(0, 0, 0, 0.2);
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: ${({ theme }) => theme.colors.torange};
     color: ${({ theme }) => theme.colors.primary};
   }
 `;
 
 Widget.Loading = styled.div`
-  min-height: 1000px;
   h1 {
     font-family: "Playfair Display", serif;
     color: ${({ theme }) => theme.colors.wood};
@@ -185,9 +196,9 @@ Widget.Loading = styled.div`
   }
 
   img {
-    width: 300px;
-    height: 300px;
-    padding-left: 20px;
+    max-width: 200px;
+    max-height: 500px;
+    padding-left: 13px;
   }
 `;
 

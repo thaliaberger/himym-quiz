@@ -11,13 +11,7 @@ function LoadingWidget() {
   return (
     <Widget.Loading>
       <h1>wait for it</h1>
-
-      <img
-        style={{
-          margin: "0 auto",
-        }}
-        src="https://media3.giphy.com/media/cOoZeyKRpexWmQP1QX/giphy.gif"
-      />
+      <img src="https://media3.giphy.com/media/cOoZeyKRpexWmQP1QX/giphy.gif" />
     </Widget.Loading>
   );
 }
@@ -38,7 +32,7 @@ function ResultWidget({ result }) {
         src="https://payload.cargocollective.com/1/19/619795/10006275/Barney.gif"
       />
       <Widget.Content>
-        <h2 className="questions-title">
+        <h2 className="result-title">
           Você acertou {result.filter((x) => x).length} questões.
         </h2>
         <ul className="result-ul">
@@ -71,6 +65,8 @@ function QuestionWidget({
   const isCorrect = selectedAlternative === question.answer;
   const hasAlternativeSelected = selectedAlternative !== undefined;
 
+  console.log(selectedAlternative);
+
   return (
     <Widget>
       <Widget.Header>
@@ -90,7 +86,7 @@ function QuestionWidget({
       />
       <Widget.Content>
         <h2 className="questions-title">{question.title}</h2>
-        <form
+        <AlternativesForm
           onSubmit={(infosDoEvento) => {
             infosDoEvento.preventDefault();
             setIsFormSubmited(true);
@@ -99,22 +95,24 @@ function QuestionWidget({
               onSubmit();
               setIsFormSubmited(false);
               setSelectedAlternative(undefined);
-            }, 3 * 1000);
+            }, 1 * 1000);
           }}
         >
           {question.alternatives.map((alternative, alternativeIndex) => {
             const alternativeId = `alternative__${alternativeIndex}`;
+            const isSelected = selectedAlternative === alternativeIndex;
             return (
               <Widget.Topic
                 as="label"
                 key={alternativeId}
                 htmlFor={alternativeId}
+                data-selected={isSelected}
               >
                 <input
                   style={{ display: "none" }}
                   id={alternativeId}
                   name={questionId}
-                  onChange={() => setSelectedAlternative(alternativeId)}
+                  onChange={() => setSelectedAlternative(alternativeIndex)}
                   type="radio"
                 />
                 {alternative}
@@ -124,7 +122,7 @@ function QuestionWidget({
           <button type="submit" disabled={!hasAlternativeSelected}>
             Ok
           </button>
-        </form>
+        </AlternativesForm>
       </Widget.Content>
     </Widget>
   );

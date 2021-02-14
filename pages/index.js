@@ -35,19 +35,11 @@ export default function Home() {
                 value={name}
               />
               <p class="legen">It's gonna be legen...</p>
-              {/* <p>
-                <small>wait for it </small>
-              </p> */}
+
               <button type="submit" disabled={name.length === 0}>
-                Jogar
+                Ei {name}, vamos jogar?
               </button>
             </form>
-          </Widget.Content>
-        </Widget>
-        <Widget>
-          <Widget.Content>
-            <h1>Quiz</h1>
-            <p>Lorem ipsum...</p>
           </Widget.Content>
         </Widget>
       </QuizContainer>

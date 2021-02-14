@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const QuizBackground = styled.div`
+  min-height: 800px;
   background: url("https://i.ibb.co/dDDyzZw/bg.png") no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
